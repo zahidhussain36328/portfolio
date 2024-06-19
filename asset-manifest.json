@@ -1,0 +1,41 @@
+{
+  "files": {
+    "main.css": "/zahidhussain36328/portfolio/static/css/main.a7fd71d9.css",
+    "main.js": "/zahidhussain36328/portfolio/static/js/main.810baae5.js",
+    "static/js/453.ace21015.chunk.js": "/zahidhussain36328/portfolio/static/js/453.ace21015.chunk.js",
+    "static/media/Home_Image.png": "/zahidhussain36328/portfolio/static/media/Home_Image.40bec110ef99d06151bb.png",
+    "static/media/about_section_image.png": "/zahidhussain36328/portfolio/static/media/about_section_image.09e7c8ee239f8f7a0676.png",
+    "static/media/contact_me_image.png": "/zahidhussain36328/portfolio/static/media/contact_me_image.35ba56b4748a7f35be6b.png",
+    "static/media/ACaslonPro-Regular.otf": "/zahidhussain36328/portfolio/static/media/ACaslonPro-Regular.0c3c5996df38974367fb.otf",
+    "static/media/FreightTextProBlack-Regular.otf": "/zahidhussain36328/portfolio/static/media/FreightTextProBlack-Regular.16cd7bb39ff4967ab478.otf",
+    "static/media/ai.png": "/zahidhussain36328/portfolio/static/media/ai.74fd3c74f03fde6a94af.png",
+    "static/media/what_do.jpeg": "/zahidhussain36328/portfolio/static/media/what_do.9707261de08a0d3645ce.jpeg",
+    "static/media/pycharm.png": "/zahidhussain36328/portfolio/static/media/pycharm.b1c18ae5c04c5f834ab0.png",
+    "static/media/openai.png": "/zahidhussain36328/portfolio/static/media/openai.67924d2dae8e9d4cc849.png",
+    "static/media/MySQL.png": "/zahidhussain36328/portfolio/static/media/MySQL.5f8a211c010a92959207.png",
+    "static/media/Linux.png": "/zahidhussain36328/portfolio/static/media/Linux.219ea3a3dff10f6f155a.png",
+    "static/media/Docker.png": "/zahidhussain36328/portfolio/static/media/Docker.a88128e5ace2318cda15.png",
+    "static/media/Git.png": "/zahidhussain36328/portfolio/static/media/Git.3ebc836487f84d177f16.png",
+    "static/media/badminton.png": "/zahidhussain36328/portfolio/static/media/badminton.ad037625f6cd8985d929.png",
+    "static/media/hands.png": "/zahidhussain36328/portfolio/static/media/hands.dd8e426c7f776b09e1bd.png",
+    "static/media/traveling.png": "/zahidhussain36328/portfolio/static/media/traveling.f4287ae61bb818e0202d.png",
+    "static/media/Pytorch.png": "/zahidhussain36328/portfolio/static/media/Pytorch.2aaa762785e20b4bf49f.png",
+    "static/media/logo_image.png": "/zahidhussain36328/portfolio/static/media/logo_image.12e6e133bc95a781a2b0.png",
+    "static/media/microchip.png": "/zahidhussain36328/portfolio/static/media/microchip.697194c4c8a47e78160f.png",
+    "static/media/bicycle.png": "/zahidhussain36328/portfolio/static/media/bicycle.be72f631f850b77fb28b.png",
+    "static/media/Python.png": "/zahidhussain36328/portfolio/static/media/Python.e80f54ac40860c436de9.png",
+    "static/media/creative-writing.png": "/zahidhussain36328/portfolio/static/media/creative-writing.8c32a88a1ec15a553fcc.png",
+    "static/media/HuggingFace.png": "/zahidhussain36328/portfolio/static/media/HuggingFace.a351cea5f653ac73aa50.png",
+    "static/media/google-cloud-platform.png": "/zahidhussain36328/portfolio/static/media/google-cloud-platform.a9474688a7f1d226aac9.png",
+    "static/media/databricks.png": "/zahidhussain36328/portfolio/static/media/databricks.edb720ee2e44605aacc9.png",
+    "static/media/Numpy.png": "/zahidhussain36328/portfolio/static/media/Numpy.3681202b2a485a4dee23.png",
+    "index.html": "/zahidhussain36328/portfolio/index.html",
+    "main.a7fd71d9.css.map": "/zahidhussain36328/portfolio/static/css/main.a7fd71d9.css.map",
+    "main.810baae5.js.map": "/zahidhussain36328/portfolio/static/js/main.810baae5.js.map",
+    "453.ace21015.chunk.js.map": "/zahidhussain36328/portfolio/static/js/453.ace21015.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a7fd71d9.css",
+    "static/js/main.810baae5.js"
+  ]
+}
