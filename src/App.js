@@ -18,40 +18,48 @@ import ReactParticles from './ReactParticles';
 import Skill from './Skills';
 
 function App() {
-  const [email, setEmail] = useState('');
-  const [firstName, setSubject] = useState('');
-  const [message, setMessage] = useState('');
-  const [response, setResponse] = useState(null);
   const [form, setForm] = useState({
     firstName: "",
-    lastName: "",
     email: "",
     message: "",
   });
+  const [response, setResponse] = useState(null);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setForm({ ...form, [name]: value });
   };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
-
-    const data = { firstName, email, message };
-
     try {
-      const res = await fetch('http://yourserver.com/send_email.php', {
+      const res = await fetch('https://sweet-kepler.161-97-115-110.plesk.page/process_form.php', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(data),
+        body: JSON.stringify(form),
       });
+
+      if (!res.ok) {
+        throw new Error('Network response was not ok');
+      }
 
       const result = await res.json();
       setResponse(result);
+      if (result.status === 'success') {
+        alert('Message sent successfully!');
+        setForm({
+          firstName: "",
+          email: "",
+          message: "",
+        });
+      } else {
+        alert('Failed to send message. Please try again.');
+      }
     } catch (error) {
       setResponse({ status: 'error', message: 'An error occurred.' });
+      alert('Failed to send message. Please try again.');
     }
   };
  
@@ -524,54 +532,59 @@ function App() {
               <div className="col-lg-7">
                 {/* <div className="text-white ps-3 mb-4">Name (Required)</div> */}
                 <form className="row" onSubmit={handleSubmit}>
-                  <div className="col-lg-6 mb-4">
-                    <label htmlFor="firstName" className="text-white ps-3 mb-2">
-                      First Name
-                    </label>
-                    <input
-                      type="text"
-                      name="firstName"
-                      required
-                      className="custom-input px-3 py-3"
-                      value={form.firstName}
-                      onChange={handleChange}
-                    />
-                  </div>
-                  <div className="col-lg-6 mb-4">
-                    <label htmlFor="email" className="text-white ps-3 mb-2">
-                      Email (Required)
-                    </label>
-                    <input
-                      type="email"
-                      name="email"
-                      required
-                      className="custom-input px-3 py-3"
-                      value={form.email}
-                      onChange={handleChange}
-                    />
-                  </div>
-                  <div className="col-lg-12 mb-4">
-                    <label htmlFor="message" className="text-white d-block ps-3 mb-2">
-                      Message
-                    </label>
-                    <textarea
-                      name="message"
-                      required
-                      className="custom-input px-3 py-3 w-100"
-                      value={form.message}
-                      onChange={handleChange}
-                    ></textarea>
-                  </div>
-                  <div className='mt-4'>
-                    <button
-                      type="submit"
-                      className="send-button px-4 mt-4 py-2"
-                      style={{ width: "fit-content" }}
-                    >
-                      Send
-                    </button>
-                  </div>
-                </form>
+      <div className="col-lg-6 mb-4">
+        <label htmlFor="firstName" className="text-white ps-3 mb-2">
+          First Name
+        </label>
+        <input
+          type="text"
+          name="firstName"
+          required
+          className="custom-input px-3 py-3"
+          value={form.firstName}
+          onChange={handleChange}
+        />
+      </div>
+      <div className="col-lg-6 mb-4">
+        <label htmlFor="email" className="text-white ps-3 mb-2">
+          Email (Required)
+        </label>
+        <input
+          type="email"
+          name="email"
+          required
+          className="custom-input px-3 py-3"
+          value={form.email}
+          onChange={handleChange}
+        />
+      </div>
+      <div className="col-lg-12 mb-4">
+        <label htmlFor="message" className="text-white d-block ps-3 mb-2">
+          Message
+        </label>
+        <textarea
+          name="message"
+          required
+          className="custom-input px-3 py-3 w-100"
+          value={form.message}
+          onChange={handleChange}
+        ></textarea>
+      </div>
+      <div className="mt-4">
+        <button
+          type="submit"
+          className="send-button px-4 mt-4 py-2"
+          style={{ width: "fit-content" }}
+        >
+          Send
+        </button>
+      </div>
+      {/* {response && (
+        <div className={`response-message ${response.status}`}>
+          {response.message}
+        </div>
+      )} */}
+    </form>
               </div>
             </div>
           </div>
