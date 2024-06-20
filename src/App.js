@@ -38,9 +38,9 @@ function App() {
       "template_ui7um7y", // your actual template ID
       {
         from_name: `${form.firstName}`,
-        to_name: "Asad Malik",
+        to_name: "Zahid hussain",
         from_email: form.email,
-        to_email: "nipunikajain@gmail.com",
+        to_email: "raozahid489@gmail.com",
         message: form.message,
       },
       "8L6JQ-OE0gLgxL4E2" // your actual public key
@@ -260,12 +260,13 @@ function App() {
 
             </div>
           </div>
-          <span className='seprator main_sep'> </span>
 
-        </div> 
+        </div>
+        <span className='seprator main_sep'> </span>
+
         <div className='main_wrapper '>
           {/* main section no 2 start */}
-          <div className="container " id='about'> 
+          <div className="container pt-2" id='about'> 
 
             <div className="row  align-items-center">
               <div className="col-lg-6">
@@ -301,8 +302,8 @@ function App() {
                 <h1 className="text-center footer-text mainHeading">HOBBIES &amp; INTERESTS</h1>
               </div>
             </div>
-            <div className="row mt-5">
-              <div className="col-lg-4 mb-5">
+            <div className="row mt-3">
+              <div className="col-lg-4 mb-3 mb-lg-5">
                 <div className="d-flex hobbies justify-content-center align-items-center">
                   <div className="text-center">
                     <img
@@ -316,7 +317,7 @@ function App() {
                   <h5 className="text-white ps-3 mb-0">AIResearch</h5>
                 </div>
               </div>
-              <div className="col-lg-4 mb-5">
+              <div className="col-lg-4 mb-3 mb-lg-5">
                 <div className="d-flex hobbies justify-content-center align-items-center">
                   <div className="text-center">
                     <img
@@ -330,7 +331,7 @@ function App() {
                   <h5 className="text-white ps-3 mb-0">Cycling</h5>
                 </div>
               </div>
-              <div className="col-lg-4 mb-5">
+              <div className="col-lg-4 mb-3 mb-lg-5">
                 <div className="d-flex hobbies justify-content-center align-items-center">
                   <div className="text-center">
                     <img
@@ -344,7 +345,7 @@ function App() {
                   <h5 className="text-white ps-3 mb-0">Badminton</h5>
                 </div>
               </div>
-              <div className="col-lg-4 mb-5">
+              <div className="col-lg-4 mb-3 mb-lg-0">
                 <div className="d-flex hobbies justify-content-center align-items-center">
                   <div className="text-center">
                     <img
@@ -358,7 +359,7 @@ function App() {
                   <h5 className="text-white ps-3 mb-0">Creative Writing</h5>
                 </div>
               </div>
-              <div className="col-lg-4 mb-5">
+              <div className="col-lg-4 mb-3 mb-lg-0">
                 <div className="d-flex hobbies justify-content-center align-items-center">
                   <div className="text-center">
                     <img
@@ -372,7 +373,7 @@ function App() {
                   <h5 className="text-white ps-3 mb-0">Driving</h5>
                 </div>
               </div>
-              <div className="col-lg-4 mb-5">
+              <div className="col-lg-4 mb-3 mb-lg-0">
                 <div className="d-flex hobbies justify-content-center align-items-center">
                   <div className="text-center">
                     <img
@@ -464,21 +465,34 @@ function App() {
         </div>
 
         <div className='seprator contact-sp'> </div>
-        <div id='contact' className="footer  ">
+        <div id='contact' className="footer">
 
           <div className="container">
             <div className="row mt-lg-5 ">
               <div className="col-lg-5">
                 <div className="contact-text custom-color  mt-5">CONTACT ME!</div>
-                <div className="mt-4">
-                  <div className="card-discription mt-2 custom-color">
-                    nipunikajain@gmail.com
+                <div className="row mt-4">
+                  <div className='col-md-5 text-center'>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-linkedin fea icon-md"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                <h5 class="title text-white text-uppercase text-white my-4">Linkedin</h5>
+                <p class="text-muted">Personal LinkedIn</p>
+                <a href="#" className='custom-color'>Nipunika's LinkedIn</a>
                   </div>
+                  <div className='col-md-7 text-center'>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-map-pin fea icon-md"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                  <h5 class="title text-white text-uppercase text-white my-4">Location</h5>
+                  <p class="text-muted">123 Denso Street New York, NY 12515</p>
+                  </div>
+
+
+                  {/* <div className="card-discription mt-2 custom-color">
+                    nipunikajain@gmail.com
+                  </div> */}
                   {/* <div className="card-discription mt-2 custom-color">12345678</div> */}
                 </div>
                 <div className="mt-4">
                   <div className="card-discription mt-2 custom-color">
-                    123 Denso Street New York, NY 12515</div>
+                    </div>
                 </div>
               </div>
               <div className="col-lg-7">

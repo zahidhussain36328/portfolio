@@ -410,7 +410,7 @@ width: 35px;
      z-index: 1;
      background: #2a3943;
      padding: 10px 0;
-     height: 100vh;
+     /* height: 92vh; */
 }
 .main_wrapper{
     position: relative;
@@ -421,6 +421,9 @@ width: 35px;
 }
  .main_sep{
     display: block; 
+    height: 90px;
+    background: #2a3943;
+    z-index: 1;
 }
 .contact-sp{
     display: block;
