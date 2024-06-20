@@ -18,6 +18,10 @@ import ReactParticles from './ReactParticles';
 import Skill from './Skills';
 
 function App() {
+  const [email, setEmail] = useState('');
+  const [firstName, setSubject] = useState('');
+  const [message, setMessage] = useState('');
+  const [response, setResponse] = useState(null);
   const [form, setForm] = useState({
     firstName: "",
     lastName: "",
@@ -29,33 +33,55 @@ function App() {
     const { name, value } = e.target;
     setForm({ ...form, [name]: value });
   };
-
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    
 
-    emailjs.send(
-      "service_mn6cy0e", // your actual service ID
-      "template_ui7um7y", // your actual template ID
-      {
-        from_name: `${form.firstName}`,
-        to_name: "Zahid hussain",
-        from_email: form.email,
-        to_email: "raozahid489@gmail.com",
-        message: form.message,
-      },
-      "8L6JQ-OE0gLgxL4E2" // your actual public key
-    )
-      .then(
-        (response) => {
-          console.log("SUCCESS!", response.status, response.text);
-          alert("Message sent successfully!");
+    const data = { firstName, email, message };
+
+    try {
+      const res = await fetch('http://yourserver.com/send_email.php', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
         },
-        (error) => {
-          console.error("FAILED...", error);
-          alert("Message sending failed.");
-        }
-      );
+        body: JSON.stringify(data),
+      });
+
+      const result = await res.json();
+      setResponse(result);
+    } catch (error) {
+      setResponse({ status: 'error', message: 'An error occurred.' });
+    }
   };
+ 
+
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+
+  //   emailjs.send(
+  //     "service_mn6cy0e", // your actual service ID
+  //     "template_ui7um7y", // your actual template ID
+  //     {
+  //       from_name: `${form.firstName}`,
+  //       to_name: "Zahid hussain",
+  //       from_email: form.email,
+  //       to_email: "raozahid489@gmail.com",
+  //       message: form.message,
+  //     },
+  //     "8L6JQ-OE0gLgxL4E2" // your actual public key
+  //   )
+  //     .then(
+  //       (response) => {
+  //         console.log("SUCCESS!", response.status, response.text);
+  //         alert("Message sent successfully!");
+  //       },
+  //       (error) => {
+  //         console.error("FAILED...", error);
+  //         alert("Message sending failed.");
+  //       }
+  //     );
+  // };
 
 
   // ---------------
